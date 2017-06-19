@@ -52,7 +52,9 @@ span {
 }
 
 button {
-	
+	@media (max-width: 480px) {
+		width: 100%;
+	}
 }
 
 img {

@@ -5,6 +5,12 @@
 	}
 }
 
+.portfolio .wrapper {
+	@media (max-width: 540px) {
+		width: 90%;
+	}
+}
+
 .portfolio .section-title {
 	margin-bottom: 60px;
 	text-align: center;
@@ -87,7 +93,7 @@
 
 .project-content {
 	display: flex;
-	flex-flow: column nowrap;
+	flex-direction: column;
 	justify-content: center;
 	width: 50%;
 	margin-left: 15px;
@@ -107,10 +113,18 @@
 	}
 	&__buttons {
 		align-self: center;
+		@media (max-width: 480px) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 		.btn {
 			margin: 0px 5px 0px 5px;
 			&:hover a {
 				color: $dkColor;
+			}
+			@media (max-width: 480px) {
+				margin: 5px 0px 5px 0px;
 			}
 		}
 	}

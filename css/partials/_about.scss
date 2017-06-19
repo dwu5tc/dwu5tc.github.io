@@ -60,13 +60,17 @@
 }
 
 .about-text__skills {
-	overflow: hidden;
+	width: 100%;
 }
 
 .skills-selector {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	margin-bottom: 40px;
+	@media (max-width: 720px) {
+		flex-wrap: wrap;
+	}
 	.btn {
 		color: $dkColor;
 		&:hover,
@@ -80,6 +84,7 @@
 .skills-list {
 	display: flex;
 	flex-direction: row;
+	overflow: hidden;
 	position: relative;
 	width: 300%;
 	> * {

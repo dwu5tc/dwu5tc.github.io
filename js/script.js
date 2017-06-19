@@ -1,18 +1,9 @@
 var app = {}
 
 app.init = function() {
-	// app.addNavListener();
 	app.addNavScrollListener();
 	app.addSkillsSelectorListener();
 }
-
-// app.addNavListener = function() {
-// 	$(".nav-bottom__item").on("click", function(e) {
-// 		e.preventDefault();
-// 		$(".nav-bottom__item").removeClass("item--selected");
-// 		$(this).toggleClass("item--selected");
-// 	});
-// }
 
 app.addSkillsSelectorListener = function() {
 	$(".skills-selector .btn").on("click", function() {
@@ -39,29 +30,33 @@ app.addNavScrollListener = function() {
 	var center = $(window).height()/2
 	if ($(window).width() > 540) 
 	{
+		$(window).resize(function () {
+			about = document.getElementById("about").getBoundingClientRect();
+			portfolio = document.getElementById("portfolio").getBoundingClientRect();
+			contact = document.getElementById("contact").getBoundingClientRect();
+			center = $(window).height()/2
+		});
 		$(window).scroll(function() {
 			var scrollPosition = window.scrollY+center;
-			
-			console.log(scrollPosition, about, portfolio, contact);
 			if (scrollPosition >= 0) {
-				
 				if (scrollPosition >= about.top && scrollPosition < portfolio.top) {
 					$(".nav-bottom__item").removeClass("item--selected");
 					$(".nav-about").addClass("item--selected");
-					console.log("about");
+					$("nav").addClass("nav--dk");
 				}
 				else if (scrollPosition >= portfolio.top && scrollPosition < contact.top) {
 					$(".nav-bottom__item").removeClass("item--selected");
 					$(".nav-portfolio").addClass("item--selected");
-					console.log("port");
+					$("nav").addClass("nav--dk");
 				}
 				else if (scrollPosition >= contact.top) {
 					$(".nav-bottom__item").removeClass("item--selected");
 					$(".nav-contact").addClass("item--selected");
-					console.log("contact");
+					$("nav").removeClass("nav--dk");
 				}
 				else {
 					$(".nav-bottom__item").removeClass("item--selected");
+					$("nav").removeClass("nav--dk");
 				}
 			}
 		});

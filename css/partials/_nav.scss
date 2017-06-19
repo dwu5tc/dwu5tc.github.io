@@ -1,135 +1,136 @@
 nav {
-	position: relative;
 	height: 100vh;
 	position: fixed;
-	right: 50px;
+	right: 0px;
+	width: 50px;
 	padding: 3% 0 3% 0;
 	display: flex;
 	flex-direction: column;
-	// justify-content: space-between;
-	
+	align-items: center;
 	background-color: transparent;
 	a span {
-		color: blue;
+		color: $ltColor;
+	}
+}
+
+.nav--dk {
+	a span {
+		color: $dkColor;
+	}
+}
+
+.nav--dk {
+	a span::before,
+	a span::after {
+		border-bottom: 1px solid $dkColor;
 	}
 }
 
 .nav-top {
-	height: 30vh;
+	height: 20vh;
 	text-align: center;
-	background-color: darkcyan;
-}
-
-.nav-current {
-	text-transform: uppercase;
-	position: absolute;
-	top: 50%; left: 50%;
-	transform: translate(-50%, -50%);
-	span {
-		display: block;
-		transform: rotate(90deg);
-	}
-	&--hidden {
-
-	}
 }
 
 .nav-bottom {
-	background-color: orange;
-	height: 70vh;
-	
+	height: 80vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-end;
 	align-self: center;
+	@media (max-width: 540px) {
+		display: none;
+	}
 	.nav-about {
-		height: 11vh;
+		height: 12.5vh;
 	}
 	.nav-portfolio {
-		height: 16vh;
+		height: 15vh;
 	}
 	.nav-contact {
-		height: 14vh;
-	}
-	&__item {
-		// position: absolute;
-		background-color: orange;
-		// left: 50%;
-		// transform: translate(-50%, -50%);
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		visibility: visible;
-		// height: 12vh;
-		// width: 10px;
-		// transform: rotate(90deg);
-		transition: all 1s ease-in-out;
-		// background-color: darkcyan;
-		// border: 1px solid white;
-		// ::before {
-		// 	position: absolute;
-		// 	content: "";
-		// 	top: 50%;
-		// 	left: -5px;
-		// 	transform: translate(-100%, -50%);
-		// 	width: 0px;
-		// 	height: 1px;
-		// 	background-color: red;
-		// }
-		// ::after {
-		// 	position: absolute;
-		// 	content: "";
-		// 	top: 50%;
-		// 	right: -20px;
-		// 	transform: translate(100%, -50%);
-		// 	width: 0px;
-		// 	height: 1px;
-		// 	background-color: red;
-		// }
-		a {
-			position: relative;
-			padding: 10px 0px 10px 0px;
-			display: flex;
-			justify-content: center;
-			
-		}
-		span {
-			position: absolute;
-			// position: relative;
-			// margin: 10px 0 10px 0;
-			transform: rotate(90deg);
-		}
+		height: 15vh;
 	}
 }
 
-.nav-bottom__item.item--selected {
-	// position: absolute;	
-	height: 0vh;
-	overflow: hidden;
-	visibility: hidden;
+.nav-bottom__item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	transition: all 0.5s ease-in-out;
 	a {
-		transform: translateY(-100%);
-		overflow: hidden;
+		display: flex;
+		justify-content: center;
 	}
-	// ::before {
-	// 	position: absolute;
-	// 	content: "";
-	// 	top: 50%;
-	// 	left: -10px;
-	// 	transform: translate(-100%, -50%);
-	// 	width: 40px;
-	// 	height: 1px;
-	// 	background-color: red;
-	// }
-	// ::after {
-	// 	position: absolute;
-	// 	content: "";
-	// 	top: 50%;
-	// 	right: -10px;
-	// 	transform: translate(100%, -50%);
-	// 	width: 40px;
-	// 	height: 1px;
-	// 	background-color: red;
-	// }
+	span {
+		position: absolute;
+		transform: rotate(90deg);
+	}
+	span::before {
+		position: absolute;
+		content: "";
+		top: 0%;
+		left: -10px;
+		transform: translate(-100%, -50%);
+		width: 0vh;
+		height: 1rem;
+		border-bottom: 1px solid $ltColor;
+		transition: all 0.5s ease-in-out;
+	}
+	span::after {
+		position: absolute;
+		content: "";
+		top: 0%;
+		right: -10px;
+		transform: translate(100%, -50%);
+		width: 0vh;
+		height: 1rem;
+		border-bottom: 1px solid $ltColor;
+		transition: all 0.5s ease-in-out;
+	}
+}
+
+.item--selected {
+	flex-grow: 1;
+	span::before {
+		position: absolute;
+		content: "";
+		top: 0%;
+		left: -10px;
+		transform: translate(-100%, -50%);
+		width: 10vh;
+		height: 1rem;
+		border-bottom: 1px solid $ltColor;
+	}
+	span::after {
+		position: absolute;
+		content: "";
+		top: 0%;
+		right: -10px;
+		transform: translate(100%, -50%);
+		width: 10vh;
+		height: 1rem;
+		border-bottom: 1px solid $ltColor;
+	}
+}
+
+.burger-menu {
+	position: absolute;
+	z-index: 999;
+	display: none;
+	@media (max-width: 540px) {
+		display: flex;
+	}
+	position: fixed;
+	bottom: 0;
+	align-self: flex-end;
+	flex-direction: column;
+	background-color: $dkColor;
+	justify-content: flex-end;
+	a span {
+		color: $ltColor;
+	}
+}
+
+.burger {
+	height: 1rem;
 }
