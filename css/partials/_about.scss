@@ -61,6 +61,7 @@
 
 .about-text__skills {
 	width: 100%;
+	overflow: hidden;
 }
 
 .skills-selector {
@@ -84,7 +85,6 @@
 .skills-list {
 	display: flex;
 	flex-direction: row;
-	overflow: hidden;
 	position: relative;
 	width: 300%;
 	> * {

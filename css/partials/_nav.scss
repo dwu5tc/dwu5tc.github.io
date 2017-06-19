@@ -2,12 +2,15 @@ nav {
 	height: 100vh;
 	position: fixed;
 	right: 0px;
-	width: 50px;
+	width: 75px;
 	padding: 3% 0 3% 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background-color: transparent;
+	@media (max-width: 720px) {
+		width: 50px;
+	}
 	a span {
 		color: $ltColor;
 	}
@@ -37,7 +40,6 @@ nav {
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-end;
-	align-self: center;
 	@media (max-width: 540px) {
 		display: none;
 	}

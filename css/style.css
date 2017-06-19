@@ -207,7 +207,7 @@ nav {
   height: 100vh;
   position: fixed;
   right: 0px;
-  width: 50px;
+  width: 75px;
   padding: 3% 0 3% 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -223,6 +223,9 @@ nav {
   -ms-flex-align: center;
   align-items: center;
   background-color: transparent; }
+  @media (max-width: 720px) {
+    nav {
+      width: 50px; } }
   nav a span {
     color: #f0f0f0; }
 
@@ -255,10 +258,7 @@ nav {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center; }
+  justify-content: flex-end; }
   @media (max-width: 540px) {
     .nav-bottom {
       display: none; } }
@@ -488,7 +488,8 @@ nav {
     align-self: center; }
 
 .about-text__skills {
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
 
 .skills-selector {
   display: -webkit-box;
@@ -526,7 +527,6 @@ nav {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  overflow: hidden;
   position: relative;
   width: 300%; }
   .skills-list > * {
