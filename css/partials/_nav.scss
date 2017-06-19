@@ -1,0 +1,135 @@
+nav {
+	position: relative;
+	height: 100vh;
+	position: fixed;
+	right: 50px;
+	padding: 3% 0 3% 0;
+	display: flex;
+	flex-direction: column;
+	// justify-content: space-between;
+	
+	background-color: transparent;
+	a span {
+		color: blue;
+	}
+}
+
+.nav-top {
+	height: 30vh;
+	text-align: center;
+	background-color: darkcyan;
+}
+
+.nav-current {
+	text-transform: uppercase;
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+	span {
+		display: block;
+		transform: rotate(90deg);
+	}
+	&--hidden {
+
+	}
+}
+
+.nav-bottom {
+	background-color: orange;
+	height: 70vh;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	align-self: center;
+	.nav-about {
+		height: 11vh;
+	}
+	.nav-portfolio {
+		height: 16vh;
+	}
+	.nav-contact {
+		height: 14vh;
+	}
+	&__item {
+		// position: absolute;
+		background-color: orange;
+		// left: 50%;
+		// transform: translate(-50%, -50%);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		visibility: visible;
+		// height: 12vh;
+		// width: 10px;
+		// transform: rotate(90deg);
+		transition: all 1s ease-in-out;
+		// background-color: darkcyan;
+		// border: 1px solid white;
+		// ::before {
+		// 	position: absolute;
+		// 	content: "";
+		// 	top: 50%;
+		// 	left: -5px;
+		// 	transform: translate(-100%, -50%);
+		// 	width: 0px;
+		// 	height: 1px;
+		// 	background-color: red;
+		// }
+		// ::after {
+		// 	position: absolute;
+		// 	content: "";
+		// 	top: 50%;
+		// 	right: -20px;
+		// 	transform: translate(100%, -50%);
+		// 	width: 0px;
+		// 	height: 1px;
+		// 	background-color: red;
+		// }
+		a {
+			position: relative;
+			padding: 10px 0px 10px 0px;
+			display: flex;
+			justify-content: center;
+			
+		}
+		span {
+			position: absolute;
+			// position: relative;
+			// margin: 10px 0 10px 0;
+			transform: rotate(90deg);
+		}
+	}
+}
+
+.nav-bottom__item.item--selected {
+	// position: absolute;	
+	height: 0vh;
+	overflow: hidden;
+	visibility: hidden;
+	a {
+		transform: translateY(-100%);
+		overflow: hidden;
+	}
+	// ::before {
+	// 	position: absolute;
+	// 	content: "";
+	// 	top: 50%;
+	// 	left: -10px;
+	// 	transform: translate(-100%, -50%);
+	// 	width: 40px;
+	// 	height: 1px;
+	// 	background-color: red;
+	// }
+	// ::after {
+	// 	position: absolute;
+	// 	content: "";
+	// 	top: 50%;
+	// 	right: -10px;
+	// 	transform: translate(100%, -50%);
+	// 	width: 40px;
+	// 	height: 1px;
+	// 	background-color: red;
+	// }
+}

@@ -1,0 +1,117 @@
+.portfolio {
+	background-color: $medLtColor;
+	h2 {
+		color: $dkColor;
+	}
+}
+
+.portfolio .section-title {
+	margin-bottom: 60px;
+	text-align: center;
+	@media (max-width: 980px) {
+		margin-bottom: 40px;
+	}
+}
+
+.project {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 60px;
+	padding: 40px;
+	background-color: $dkColor;
+	p {
+		color: $ltColor;
+	}
+	@media (max-width: 980px) {
+		flex-direction: column;
+		.project-preview {
+			order: 0;
+			width: 100%;
+			margin: 0;
+			margin-bottom: 30px;
+		}
+		.project-content {
+			order: 1;
+			width: 100%;
+			margin: 0;
+		}
+	}
+}
+
+.project:last-child {
+	margin-bottom: 0;
+}
+
+.project:nth-of-type(2n+1) {
+	.project-preview {
+		order: 1;
+		margin-left: 15px;
+		margin-right: 0px;
+	}
+	.project-content {
+		margin-left: 0px;
+		margin-right: 15px;
+	}
+}
+
+.project-preview {
+	position: relative;
+	width: 50%;
+	overflow: hidden;
+	margin-right: 15px;
+	.item-hover {
+		position: absolute;
+		top: 0; right: 0;
+		left: 0; bottom: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(35, 35, 35, 0.5);
+		visibility: hidden;
+		opacity: 0;
+		transition: all 0.5s ease-in-out;
+	}
+	&:hover .item-hover {
+		visibility: visible;
+		opacity: 1;
+	}
+	img {
+		transition: all 0.5s ease-in-out;
+	}
+	&:hover img {
+		filter: blur(3px);
+		transform: scale(1.05);
+	}
+}
+
+.project-content {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	width: 50%;
+	margin-left: 15px;
+	h3 {
+		margin-bottom: 24px;
+	}
+	p {
+		margin-bottom: 18px;
+	}
+	&__skills {
+		display: flex;
+		flex-flow: row wrap;
+		margin-bottom: 18px;
+		li {
+			margin-right: 20px;
+		}
+	}
+	&__buttons {
+		align-self: center;
+		.btn {
+			margin: 0px 5px 0px 5px;
+			&:hover a {
+				color: $dkColor;
+			}
+		}
+	}
+}

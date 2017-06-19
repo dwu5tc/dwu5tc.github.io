@@ -1,0 +1,96 @@
+.about {
+	background-color: $ltColor;
+	h2,
+	h3 {
+		color: $dkColor;
+	}
+	p {
+		color: $medDkColor;
+	}
+	li {
+		color: $dkColor;
+	}
+}
+
+.about .wrapper {
+	display: flex;
+	flex-drection: row;
+	@media (max-width: 980px) {
+		flex-direction: column;
+		> * {
+			width: 100%;
+		}
+		.about-image__container {
+			display: none;
+		}
+	}
+}
+
+.about .section-title {
+	margin-bottom: 60px;
+	text-align: right;
+	@media (max-width: 980px) {
+		margin-bottom: 40px;
+		text-align: center;
+	}
+}
+
+.about-image {
+	padding: 0px 30px 0px 30px;
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	&__container {
+		align-self: center;
+	}
+}
+
+.about-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 60%;
+	padding: 0px 30px 0px 30px;
+	p {
+		margin-bottom: 40px;
+	}
+	&__skills {
+		align-self: center;
+	}
+}
+
+.about-text__skills {
+	overflow: hidden;
+}
+
+.skills-selector {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 40px;
+	.btn {
+		color: $dkColor;
+		&:hover,
+		&--selected {
+			color: $ltColor;
+			background-color: $dkColor;
+		}
+	}
+}
+
+.skills-list {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	width: 300%;
+	> * {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		left: -0%;
+		width: 100%;
+		transition: all 0.5s ease-in-out;
+		ul {
+
+		}
+	}
+}
