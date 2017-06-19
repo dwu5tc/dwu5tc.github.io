@@ -27,7 +27,7 @@ app.addNavScrollListener = function() {
 	var about = document.getElementById("about").getBoundingClientRect();
 	var portfolio = document.getElementById("portfolio").getBoundingClientRect();
 	var contact = document.getElementById("contact").getBoundingClientRect();
-	var center = $(window).height()/2
+	var center = $(window).height()/2;
 	var startPosition = window.scrollY;
 	if ($(window).width() > 540) 
 	{
@@ -35,7 +35,8 @@ app.addNavScrollListener = function() {
 			about = document.getElementById("about").getBoundingClientRect();
 			portfolio = document.getElementById("portfolio").getBoundingClientRect();
 			contact = document.getElementById("contact").getBoundingClientRect();
-			center = $(window).height()/2
+			center = $(window).height()/2;
+			startPosition = window.scrollY;
 		});
 
 		$(window).scroll(function() {
