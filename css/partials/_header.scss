@@ -1,4 +1,11 @@
 .hero {
 	height: 100vh;
-	background: url(http://unsplash.it/1800/900) fixed no-repeat 0 0/contain
+	background: url(http://unsplash.it/2100/900) fixed no-repeat 0 0/cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	h1 {
+		font-size: 100px;
+	}
 }

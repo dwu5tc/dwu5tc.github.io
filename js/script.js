@@ -28,6 +28,7 @@ app.addNavScrollListener = function() {
 	var portfolio = document.getElementById("portfolio").getBoundingClientRect();
 	var contact = document.getElementById("contact").getBoundingClientRect();
 	var center = $(window).height()/2
+	var startPosition = window.scrollY;
 	if ($(window).width() > 540) 
 	{
 		$(window).resize(function () {
@@ -36,27 +37,46 @@ app.addNavScrollListener = function() {
 			contact = document.getElementById("contact").getBoundingClientRect();
 			center = $(window).height()/2
 		});
+
 		$(window).scroll(function() {
-			var scrollPosition = window.scrollY+center;
-			if (scrollPosition >= 0) {
-				if (scrollPosition >= about.top && scrollPosition < portfolio.top) {
+			var currPosition = window.scrollY;
+			if (currPosition >= 0) {
+				if (currPosition >= about.top+startPosition && currPosition < portfolio.top+startPosition) {
+					$(".nav-top").addClass("nav--dk");
+				}
+				else if (currPosition >= portfolio.top+startPosition && currPosition < contact.top+startPosition) {
+					$(".nav-top").addClass("nav--dk");
+				}
+				else if (currPosition >= contact.top+startPosition) {
+					$(".nav-top").removeClass("nav--dk");
+				}
+				else {
+					$(".nav-top").removeClass("nav--dk");
+				}
+			}
+		});
+
+		$(window).scroll(function() {
+			var currPosition = window.scrollY+center;
+			if (currPosition >= 0) {
+				if (currPosition >= about.top+startPosition && currPosition < portfolio.top+startPosition) {
 					$(".nav-bottom__item").removeClass("item--selected");
 					$(".nav-about").addClass("item--selected");
-					$("nav").addClass("nav--dk");
+					$(".nav-bottom").addClass("nav--dk");
 				}
-				else if (scrollPosition >= portfolio.top && scrollPosition < contact.top) {
+				else if (currPosition >= portfolio.top+startPosition && currPosition < contact.top+startPosition) {
 					$(".nav-bottom__item").removeClass("item--selected");
 					$(".nav-portfolio").addClass("item--selected");
-					$("nav").addClass("nav--dk");
+					$(".nav-bottom").addClass("nav--dk");
 				}
-				else if (scrollPosition >= contact.top) {
+				else if (currPosition >= contact.top+startPosition) {
 					$(".nav-bottom__item").removeClass("item--selected");
 					$(".nav-contact").addClass("item--selected");
-					$("nav").removeClass("nav--dk");
+					$(".nav-bottom").removeClass("nav--dk");
 				}
 				else {
 					$(".nav-bottom__item").removeClass("item--selected");
-					$("nav").removeClass("nav--dk");
+					$(".nav-bottom").removeClass("nav--dk");
 				}
 			}
 		});
