@@ -35,6 +35,9 @@ nav {
 		font-size: 28px;
 		letter-spacing: 0px;
 	}
+	@media (max-width: 540px) {
+		display: none;
+	}
 }
 
 .nav-bottom {

@@ -7,7 +7,12 @@ app.init = function() {
 }
 
 app.heroAnimation = function() {
-	app.renderLetter("DEAN WU", 0);
+	if ($(window).width() > 720) {
+		app.renderLetter("DEAN WU", 0); 
+	}
+	else {
+		$(".hero h1").html("DW");
+	}
 }
 
 app.renderLetter = function(str, index) {

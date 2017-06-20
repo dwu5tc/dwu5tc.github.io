@@ -12,9 +12,13 @@
 	transition: background-image 0.5s ease-in-out, background-size 0s;
 	&__text {
 		z-index: 10;
+		width: 70%;
+		@media (max-width: 720px) {
+			margin: 0 auto;
+			text-align: center;
+		}
 	}
 	h1 {
-		width: 800px;
 		font-size: 125px;
 		line-height: 1.15;
 		span {
@@ -30,6 +34,13 @@
 		font-size: 28px;
 		color: rgba(255, 255, 255, 0.5);
 		letter-spacing: 14px;
+		@media (max-width: 720px) {
+			font-size: 16px;
+			letter-spacing: 8px;
+		}
+		@media (max-width: 480px) {
+			display: none;
+		}
 	}
 }
 
