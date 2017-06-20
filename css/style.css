@@ -142,6 +142,7 @@ h1 {
   text-transform: uppercase; }
 
 h2 {
+  font-family: 'Playfair Display SC', serif;
   font-size: 28px;
   text-transform: uppercase; }
 
@@ -439,7 +440,8 @@ nav {
     .hero h1 span {
       font-family: 'Playfair Display SC', serif;
       color: rgba(255, 255, 255, 0.2); }
-  .hero h2 {
+  .hero h3 {
+    font-size: 28px;
     color: rgba(255, 255, 255, 0.5);
     letter-spacing: 14px; }
 
