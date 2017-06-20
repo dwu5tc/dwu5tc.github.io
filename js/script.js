@@ -3,6 +3,31 @@ var app = {}
 app.init = function() {
 	app.addNavScrollListener();
 	app.addSkillsSelectorListener();
+	app.heroAnimation();
+}
+
+app.heroAnimation = function() {
+	app.renderLetter("DEAN WU", 0);
+}
+
+app.renderLetter = function(str, index) {
+	var alphabetValue = str.charCodeAt(index)-64;
+	var speed = 40+(500/alphabetValue*0.6);
+	if (index >= str.length) {
+		$(".hero h1 span").remove();
+		return;
+	}
+	var i = 65;
+	var intervalId = setInterval(function() {
+		var temp = String.fromCharCode(i);
+		$(".hero h1 span").html(temp);
+		if (temp == str[index] || i >= 90 || str[index] == " ") {
+			$(".hero h1").html(`${str.slice(0, index+1)}<span></span>`);
+			clearInterval(intervalId);
+			app.renderLetter(str, index+1);
+		}
+		i++;
+	}, speed);
 }
 
 app.addSkillsSelectorListener = function() {

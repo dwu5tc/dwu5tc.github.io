@@ -14,15 +14,13 @@ nav {
 	a span {
 		color: $ltColor;
 	}
+	z-index: 10;
 }
 
 .nav--dk {
 	a span {
 		color: $dkColor;
 	}
-}
-
-.nav--dk {
 	a span::before,
 	a span::after {
 		border-bottom: 1px solid $dkColor;
@@ -32,6 +30,11 @@ nav {
 .nav-top {
 	height: 20vh;
 	text-align: center;
+	span {
+		font-family: "Playfair Display SC", serif;
+		font-size: 28px;
+		letter-spacing: 0px;
+	}
 }
 
 .nav-bottom {

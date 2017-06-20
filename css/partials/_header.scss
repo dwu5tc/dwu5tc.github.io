@@ -1,11 +1,40 @@
 .hero {
+	position: relative;
 	height: 100vh;
-	background: url(http://unsplash.it/2100/900) fixed no-repeat 0 0/cover;
+	background-image: url(../imgs/tokyo.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	h1 {
-		font-size: 100px;
+	transition: background-image 0.5s ease-in-out, background-size 0s;
+	&__text {
+		z-index: 10;
 	}
+	h1 {
+		width: 800px;
+		font-size: 125px;
+		line-height: 1.15;
+		span {
+			font-family: 'Playfair Display SC', serif;
+			color: rgba(255, 255, 255, 0.2);
+			// padding-right: 8px;
+			// border-right: 5px solid rgba(255, 255, 255, 0.2);
+
+		}
+		// margin-bottom: 0.8rem;
+	}
+	h2 {
+		color: rgba(255, 255, 255, 0.5);
+		letter-spacing: 14px;
+	}
+}
+
+.hero-overlay {
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 0; right: 0;
+	bottom: 0; left: 0;
 }
