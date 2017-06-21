@@ -3,6 +3,9 @@ var app = {}
 app.init = function() {
 	app.addNavScrollListener();
 	app.heroAnimation();
+	setInterval(function() {
+		app.heroAnimation();
+	}, 20000);
 }
 
 app.heroAnimation = function() {
