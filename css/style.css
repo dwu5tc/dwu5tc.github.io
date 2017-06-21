@@ -597,6 +597,15 @@ nav {
     flex-flow: row wrap; }
     .toolbox__item ul li {
       margin-right: 20px; }
+  @media (max-width: 540px) {
+    .toolbox__item {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .toolbox__item > * {
+        width: 100%; } }
 
 .portfolio {
   background-color: #dedede; }
