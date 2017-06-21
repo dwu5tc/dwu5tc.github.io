@@ -26,6 +26,12 @@
 	margin-bottom: 60px;
 	padding: 40px;
 	background-color: $dkColor;
+	// box-shadow: 0 1px 3px 0 rgba(15, 15, 15, 0.4);
+	// transition: all 0.5s ease-in-out;
+	// &:hover {
+	// 	transform: translateY(-6px);
+	// 	box-shadow: 0 5px 10px 0 rgba(15, 15, 15, 0.4);
+	// }
 	p {
 		color: $ltColor;
 	}
@@ -54,10 +60,16 @@
 		order: 1;
 		margin-left: 15px;
 		margin-right: 0px;
+		@media (max-width: 980px) {
+				margin-left: 0px;
+		}
 	}
 	.project-content {
 		margin-left: 0px;
 		margin-right: 15px;
+		@media (max-width: 980px) {
+				margin-right: 0px;
+		}
 	}
 }
 
@@ -112,14 +124,14 @@
 		}
 	}
 	&__buttons {
-		align-self: center;
+		// align-self: center;
 		@media (max-width: 480px) {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 		}
 		.btn {
-			margin: 0px 5px 0px 5px;
+			margin: 0px 10px 0px 0px;
 			&:hover a {
 				color: $dkColor;
 			}

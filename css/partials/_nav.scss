@@ -8,13 +8,13 @@ nav {
 	flex-direction: column;
 	align-items: center;
 	background-color: transparent;
+	z-index: 10;
 	@media (max-width: 720px) {
 		width: 50px;
 	}
 	a span {
 		color: $ltColor;
 	}
-	z-index: 10;
 }
 
 .nav--dk {
@@ -23,7 +23,7 @@ nav {
 	}
 	a span::before,
 	a span::after {
-		border-bottom: 1px solid $dkColor;
+		border-bottom: 1.5px solid $dkColor;
 	}
 }
 
@@ -46,6 +46,9 @@ nav {
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-end;
+	* {
+		font-weight: 700;
+	}
 	@media (max-width: 540px) {
 		display: none;
 	}
@@ -81,7 +84,7 @@ nav {
 		transform: translate(-100%, -50%);
 		width: 0vh;
 		height: 1rem;
-		border-bottom: 1px solid $ltColor;
+		border-bottom: 1.5px solid $ltColor;
 		transition: all 0.5s ease-in-out;
 	}
 	span::after {
@@ -92,7 +95,7 @@ nav {
 		transform: translate(100%, -50%);
 		width: 0vh;
 		height: 1rem;
-		border-bottom: 1px solid $ltColor;
+		border-bottom: 1.5px solid $ltColor;
 		transition: all 0.5s ease-in-out;
 	}
 }
@@ -107,7 +110,7 @@ nav {
 		transform: translate(-100%, -50%);
 		width: 10vh;
 		height: 1rem;
-		border-bottom: 1px solid $ltColor;
+		border-bottom: 1.5px solid $ltColor;
 	}
 	span::after {
 		position: absolute;
@@ -117,7 +120,7 @@ nav {
 		transform: translate(100%, -50%);
 		width: 10vh;
 		height: 1rem;
-		border-bottom: 1px solid $ltColor;
+		border-bottom: 1.5px solid $ltColor;
 	}
 }
 

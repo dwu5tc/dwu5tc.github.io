@@ -5,4 +5,7 @@ footer {
 		text-transform: uppercase;
 		color: $medLtColor;
 	}
+	@media (max-width: 540px) {
+		text-align: center;
+	}
 }

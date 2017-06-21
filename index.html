@@ -4,8 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://use.fontawesome.com/89cd02394a.js"></script>
+	<link rel="shortcut icon" type="image/png" href="imgs/favicon_2.png"/>
 	<link rel="stylesheet" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Lato:300|Playfair+Display+SC:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Lato:300,700|Playfair+Display+SC:700" rel="stylesheet">
 	<title>Dean Wu</title>
 </head>
 <body>
@@ -26,10 +27,10 @@
 				</li>
 			</ul>
 <!-- 			<ul class="burger-menu">
-				<a data-scroll href="#"><span>DW</span></a>
-				<a data-scroll href="#about"><span>About</span></a>
-				<a data-scroll href="#portfolio"><span>Portfolio</span></a>
-				<a data-scroll href="#contact"><span>Contact</span></a>
+				<a href="#"><span>DW</span></a>
+				<a href="#about"><span>About</span></a>
+				<a href="#portfolio"><span>Portfolio</span></a>
+				<a href="#contact"><span>Contact</span></a>
 				<div class="nav-burger">
 					<div class="burger"></div>
 				</div>
@@ -37,7 +38,7 @@
 		</nav>
 		<div class="hero">
 			<div class="hero__text">
-				<h3>WEB DEVELOPER</h3>
+				<h2>FRONT-END DEVELOPER</h2>
 				<h1><span></span></h1>
 			</div>
 			<div class="hero-overlay">
@@ -48,25 +49,21 @@
 	<main>
 		<section class="about" id="about">
 			<div class="wrapper">
+				<div class="section-title">
+					<h2>About</h2>
+				</div>
 				<div class="about-image">
-					<div class="section-title">
-						<h2>About Me</h2>
-					</div>
 					<div class="about-image__container">
 						<img src="http://unsplash.it/800/800" alt="">
 					</div>
 				</div>
 				<div class="about-text">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero nemo, aliquid ipsa accusamus laboriosam quisquam praesentium reprehenderit corrupti dolorem dolorum voluptas quia fugiat ratione, esse rem ut reiciendis, labore ex. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat quidem sunt ea magnam, dicta rem repellat dignissimos, corporis cupiditate officia odit sint ratione maiores nemo odio enim, voluptatem hic iure.</p>
-					<div class="about-text__skills">
-						<div class="skills-selector">
-							<button class="btn btn--transparent btn--selected" id="proficient">Proficient</button>
-							<button class="btn btn--transparent" id="experienced">Experienced</button>
-							<button class="btn btn--transparent" id="learning">Beginner</button>
-						</div>
-						<div class="skills-list">
-							<div class="proficient">
-								<ul>
+					<div class="about-text__toolbox">
+							<h3>What's in my toolbox:</h3>
+							<div class="toolbox__item">
+								<h4>Proficient</h4>
+								<ul class="proficient">
 									<li>JavaScript</li>
 									<li>jQuery & React</li>
 									<li>Firebase</li>
@@ -74,19 +71,11 @@
 									<li>CSS3 & SASS</li>
 									<li>Java</li>
 								</ul>
-								
 							</div>
-							<div class="experienced">
-								<ul>
-									<li>Selenium</li>
+							<div class="toolbox__item">
+								<h4>Experienced</h4><ul class="experienced">
 									<li>Python</li>
-									<li>C</li>
 									<li>Git</li>
-								</ul>
-								
-							</div>
-							<div class="beginner">
-								<ul>
 									<li>Node</li>
 									<li>Gulp</li>
 								</ul>
@@ -104,13 +93,13 @@
 				</div>
 				<div class="project">
 					<figure class="project-preview">
-						<img src="http://unsplash.it/700/450" alt="">
+						<img src="imgs/idk.png" alt="">
 						<a data-scroll href="" class="item-hover">
 							<h3>Visit Site</h3>
 						</a>
 					</figure>
 					<figcaption class="project-content">
-						<h3>IDK</h3>
+						<h3>React & Firebase Web App</h3>
 						<p>A simple social media website which allows users to post text, images, and polls publicly and privately. Authentication through Google/Firebase.</p>
 						<ul class="project-content__skills">
 							<li>React</li>
@@ -126,14 +115,14 @@
 				</div> <!-- project -->
 				<div class="project">
 					<figure class="project-preview">
-						<img src="http://unsplash.it/800/450" alt="">
+						<img src="imgs/spots.png" alt="">
 						<a data-scroll href="" class="item-hover">
 							<h3>Visit Site</h3>
 						</a>
 					</figure>
 					<figcaption class="project-content">
-						<h3>spots.</h3>
-						<p></p>
+						<h3>API Web Application</h3>
+						<p>Allows users to discover Instagram posts tagged at up to 20 locations (predefined by Instagram) near to a particular Google Maps location. Users can further filter down their results by these locations, as well as by a hashtag.</p>
 						<ul class="project-content__skills">
 							<li>JavaScript</li>
 							<li>Google Places/Maps API</li>
@@ -141,21 +130,21 @@
 							<li>Responsive</li>
 						</ul>
 						<div class="project-content__buttons">
-							<button class="btn btn--transparent btn--lt"><a data-scroll href="" target="_blank">View Live</a></button>
-							<button class="btn btn--transparent btn--lt"><a data-scroll href="" target="_blank">Github</a></button>
+							<button class="btn btn--transparent btn--lt"><a href="http://deanwu.me/spots-archive" target="_blank">View Live</a></button>
+							<button class="btn btn--transparent btn--lt"><a href="https://github.com/dwu5tc/js-archive" target="_blank">Github</a></button>
 						</div>
 					</figcaption>
 				</div> <!-- project -->
 				<div class="project">
 					<figure class="project-preview">
-						<img src="http://unsplash.it/750/450" alt="">
+						<img src="imgs/js-game.png" alt="">
 						<a data-scroll href="" class="item-hover">
 							<h3>Visit Site</h3>
 						</a>
 					</figure>
 					<figcaption class="project-content">
-						<h3>Cat & Dog</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam eius ab excepturi in, quae obcaecati optio dolorem, vitae repellendus impedit exercitationem fugiat. Voluptas, molestiae, quis? Quam consequatur, voluptate culpa facilis!</p>
+						<h3>Javascript Game</h3>
+						<p>Do you prefer Cats or Dogs? Pick one to pet and score points! Don't pet the other or you'll lose lives. The higher your score, the harder the game becomes! Watch out for extra lives and the multiplier power-up. Score even more points when build up your combo meter!</p>
 						<ul class="project-content__skills">
 							<li>Javascript</li>
 							<li>jQuery</li>
@@ -163,20 +152,20 @@
 							<li></li>
 						</ul>
 						<div class="project-content__buttons">
-							<button class="btn btn--transparent btn--lt"><a data-scroll href="" target="_blank">View Live</a></button>
-							<button class="btn btn--transparent btn--lt"><a data-scroll href="" target="_blank">Github</a></button>
+							<button class="btn btn--transparent btn--lt"><a href="http://deanwu.me/js-game/" target="_blank">View Live</a></button>
+							<button class="btn btn--transparent btn--lt"><a href="https://github.com/dwu5tc/js-game" target="_blank">Github</a></button>
 						</div>
 					</figcaption>
 				</div> <!-- project -->
 				<div class="project">
 					<figure class="project-preview">
-						<img src="http://unsplash.it/600/450" alt="">
+						<img src="imgs/definity.png" alt="">
 						<a data-scroll href="" class="item-hover">
 							<h3>Visit Site</h3>
 						</a>
 					</figure>
 					<figcaption class="project-content">
-						<h3>Difinity</h3>
+						<h3>Responsive Single Page App</h3>
 						<p>A .psd to single page responsive website.</p>
 						<ul class="project-content__skills">
 							<li>HTML</li>
@@ -185,8 +174,8 @@
 							<li>Responsive</li>
 						</ul>
 						<div class="project-content__buttons">
-							<button class="btn btn--transparent btn--lt"><a data-scroll href="" target="_blank">View Live</a></button>
-							<button class="btn btn--transparent btn--lt"><a data-scroll href="" target="_blank">Github</a></button>
+							<button class="btn btn--transparent btn--lt"><a href="http://deanwu.me/definity/" target="_blank">View Live</a></button>
+							<button class="btn btn--transparent btn--lt"><a href="https://github.com/dwu5tc/definity" target="_blank">Github</a></button>
 						</div>
 					</figcaption>
 				</div> <!-- project -->
@@ -203,9 +192,9 @@
 						<p>Dean Wu</p>
 						<p><span>E-mail: </span>hello@deanwu.me</p>
 						<div class="section-content__widgets">
-							<a data-scroll href=""><i></i></a>
-							<a data-scroll href=""><i></i></a>
-							<a data-scroll href=""><i></i></a>
+							<a href=""><i></i></a>
+							<a href=""><i></i></a>
+							<a href=""><i></i></a>
 						</div>
 					</div>
 				</div>

@@ -14,21 +14,19 @@
 
 .about .wrapper {
 	display: flex;
-	flex-drection: row;
+	flex-flow: row wrap;
 	@media (max-width: 980px) {
 		flex-direction: column;
 		> * {
 			width: 100%;
 		}
-		.about-image__container {
-			display: none;
-		}
 	}
 }
 
 .about .section-title {
+	width: 100%;
 	margin-bottom: 60px;
-	text-align: right;
+	text-align: center;
 	@media (max-width: 980px) {
 		margin-bottom: 40px;
 		text-align: center;
@@ -40,8 +38,22 @@
 	width: 40%;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	&__container {
 		align-self: center;
+	}
+}
+
+.about-image__container {
+	@media (max-width: 980px) {
+		width: 45%;
+		margin-bottom: 40px;
+	}
+	@media (max-width: 720px) {
+		width: 65%;
+	}
+	@media (max-width: 540px) {
+		width: 80%;
 	}
 }
 
@@ -54,48 +66,24 @@
 	p {
 		margin-bottom: 40px;
 	}
-	&__skills {
-		align-self: center;
-	}
 }
 
-.about-text__skills {
-	width: 100%;
-	overflow: hidden;
+.about-text__toolbox h3{
+	margin-bottom: 20px;
 }
 
-.skills-selector {
+.toolbox__item {
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin-bottom: 40px;
-	@media (max-width: 720px) {
-		flex-wrap: wrap;
+	margin-bottom: 10px;
+	h4 {
+		width: 35%;
 	}
-	.btn {
-		color: $dkColor;
-		&:hover,
-		&--selected {
-			color: $ltColor;
-			background-color: $dkColor;
-		}
-	}
-}
-
-.skills-list {
-	display: flex;
-	flex-direction: row;
-	position: relative;
-	width: 300%;
-	> * {
-		position: relative;
+	ul {
+		width: 65%;
 		display: flex;
-		justify-content: center;
-		left: -0%;
-		width: 100%;
-		transition: all 0.5s ease-in-out;
-		ul {
-
+		flex-flow: row wrap;
+		li {
+			margin-right: 20px;
 		}
 	}
 }

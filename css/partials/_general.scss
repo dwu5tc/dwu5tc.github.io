@@ -5,24 +5,33 @@
 }
 
 h1 {
+	font-size: calc(80px + (150 - 80) * ((100vw - 540px) / (1500 - 540)));
 	font-family: 'Playfair Display SC', serif;
 	text-transform: uppercase;
 }
 
 h2 {
 	font-family: 'Playfair Display SC', serif;
-	font-size: 28px;
+	font-size: 36px;
+	letter-spacing: 0.5px;
 	text-transform: uppercase;
 }
 
 h3 {
 	font-size: 20px;
-	// text-transform: uppercase;
+	text-transform: uppercase;
+}
+
+h4 {
+	text-transform: uppercase;
+	font-size: 15px;
+	display: inline-block;
+	color: $dkColor;
 }
 
 p {
 	font-family: "Crimson Text", serif;
-	font-family: "serif";
+	line-height: 1.5;
 }
 
 ul {
@@ -40,11 +49,9 @@ a {
 	text-decoration: none;
 	&:link,
 	&:visited {
-
 	}
 	&:hover,
 	&:active {
-
 	}
 }
 
@@ -61,6 +68,7 @@ button {
 img {
 	display: block;
 	max-width: 100%;
+	margin: 0 auto;
 }
 
 .btn {
@@ -79,11 +87,11 @@ img {
 
 .btn--lt {
 	color: $ltColor;
-	border: 1px solid $ltColor;
+	border: 1.5px solid $ltColor;
 	&:hover {
 		color: $dkColor;
 		background-color: $ltColor;
-		border: 1px solid transparent;
+		border: 1.5px solid transparent;
 	}
 }
 
@@ -99,9 +107,8 @@ section .wrapper {
 	}
 }
 
-
 .btn {
-	border-radius: 3px;
+	// border-radius: 3px;
 }
 
 main {
