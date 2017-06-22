@@ -5,14 +5,14 @@
 }
 
 h1 {
-	font-size: calc(80px + (150 - 80) * ((100vw - 540px) / (1500 - 540)));
+	font-size: calc(80px + (115 - 80) * ((100vw - 540px) / (1500 - 540)));
 	font-family: 'Playfair Display SC', serif;
 	text-transform: uppercase;
 }
 
 h2 {
 	font-family: 'Playfair Display SC', serif;
-	font-size: 36px;
+	font-size: 30px;
 	letter-spacing: 0.5px;
 	text-transform: uppercase;
 }
@@ -76,9 +76,6 @@ img {
 	padding: 8px 24px 8px 24px;
 	border: none;
 	transition: all 0.5s ease-in-out;
-	&:hover {
-
-	}
 }
 
 .btn--transparent {
@@ -91,6 +88,16 @@ img {
 	&:hover {
 		color: $dkColor;
 		background-color: $ltColor;
+		border: 1.5px solid transparent;
+	}
+}
+
+.btn--dk {
+	color: $dkColor;
+	border: 1.5px solid $dkColor;
+	&:hover {
+		color: $ltColor;
+		background-color: $dkColor;
 		border: 1.5px solid transparent;
 	}
 }
