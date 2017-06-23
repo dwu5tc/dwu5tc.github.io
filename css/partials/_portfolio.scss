@@ -162,10 +162,3 @@
 	}
 }
 
-.iphone-image {
-	transform: translateX(15%);
-	transition: translateX 0s ease-in-out, scale 0.5s ease-in-out;
-	&:hover {
-		transform: scale(1.05) translateX(15%);
-	}
-}
