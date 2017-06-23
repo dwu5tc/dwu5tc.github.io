@@ -87,19 +87,36 @@
 				margin: 0px 0px 0px 20px;
 			}
 		}
-		.btn {
-			margin: 0px 0px 0px 10px;
+		&__buttons {
+			.btn {
+				margin: 0px 0px 0px 10px;
+				@media (max-width: 980px) {
+					margin: 0px 10px 0px 0px;
+				}
+				@media (max-width: 480px) {
+					margin: 5px 0px 5px 0px;
+				}
 			}
+		}
 		@media (max-width: 980px) {
+			margin-right: 0px;
 			align-items: flex-start;
 			text-align: left;
-
 			&__skills {
 				justify-content: flex-start;
 				li {
 					margin: 0px 20px 0px 0px;
 				}
 			} 
+		}
+	}
+}
+
+.project-content__buttons:nth-of-type(n) {
+	width: 100%;
+	@media (max-width: 480px) {
+		.btn {
+			width: 100%;
 		}
 	}
 }
