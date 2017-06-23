@@ -38,7 +38,9 @@
 	a {
 		color: $dkColor;
 	}
-
+	.btn:hover a {
+		color: $ltColor;
+	}
 	@media (max-width: 980px) {
 		flex-direction: column;
 		.project-preview {
@@ -89,9 +91,9 @@
 			margin: 0px 0px 0px 10px;
 			}
 		@media (max-width: 980px) {
-			margin-right: 0px;
 			align-items: flex-start;
 			text-align: left;
+
 			&__skills {
 				justify-content: flex-start;
 				li {
@@ -107,28 +109,18 @@
 	width: 40%;
 	// overflow: hidden;
 	margin-right: 30px;
-	.item-hover {
-		position: absolute;
-		top: 0; right: 0;
-		left: 0; bottom: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		// background-color: rgba(35, 35, 35, 0.5);
-		visibility: hidden;
-		opacity: 0;
-		transition: all 0.5s ease-in-out;
-	}
-	&:hover .item-hover {
-		visibility: visible;
-		opacity: 1;
-	}
 	img {
+		margin-right: 0;
 		max-height: 350px;
 		transition: all 0.5s ease-in-out;
 	}
 	&:hover img {
-		// transform: scale(1.0);
+		transform: scale(1.05);
+	}
+	@media (max-width: 980px) {
+		img {
+			margin: 0 auto;
+		}
 	}
 }
 
@@ -153,19 +145,27 @@
 		}
 	}
 	&__buttons {
+		.btn {
+			margin: 0px 10px 0px 0px;
+			// &:hover a {
+			// 	color: $ltColor;
+			// }
+			@media (max-width: 480px) {
+				margin: 5px 0px 5px 0px;
+			}
+		}
 		@media (max-width: 480px) {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 		}
-		.btn {
-			margin: 0px 10px 0px 0px;
-			&:hover a {
-				color: $dkColor;
-			}
-			@media (max-width: 480px) {
-				margin: 5px 0px 5px 0px;
-			}
-		}
+	}
+}
+
+.iphone-image {
+	transform: translateX(15%);
+	transition: translateX 0s ease-in-out, scale 0.5s ease-in-out;
+	&:hover {
+		transform: scale(1.05) translateX(15%);
 	}
 }
