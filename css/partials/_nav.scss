@@ -129,7 +129,9 @@ nav {
 	z-index: 999;
 	display: none;
 	@media (max-width: 540px) {
-		display: flex;
+		display: none;
+		width: 100vw;
+		height: 100vh;
 	}
 	position: fixed;
 	bottom: 0;

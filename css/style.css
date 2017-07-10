@@ -413,10 +413,9 @@ nav {
   justify-content: flex-end; }
   @media (max-width: 540px) {
     .burger-menu {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex; } }
+      display: none;
+      width: 100vw;
+      height: 100vh; } }
   .burger-menu a span {
     color: #f0f0f0; }
 
