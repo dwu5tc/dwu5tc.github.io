@@ -1,3 +1,5 @@
+// REFACTOR THIS TRASH CODE SOMETIME LOL
+
 var app = {}
 
 app.init = function() {
@@ -33,14 +35,13 @@ app.heroResize = function() {
 
 app.windowResizeHeroListener = function() {
 	$(window).resize(function () {
-		console.log("resizing");
 		app.heroResize();
 	});
 }
 
 app.renderHero = function(str, index) {
-	var alphabetIndex = str.charCodeAt(index)-64;
-	var speed = 40+(500/alphabetIndex*0.6);
+	var alphabetIndex = str.charCodeAt(index) - 64;
+	var speed = 40 + (500 / alphabetIndex * 0.6);
 	if (index >= str.length) {
 		$("h1 span").remove();
 		$(".hero h2").css("transform", "none");
@@ -51,10 +52,10 @@ app.renderHero = function(str, index) {
 	var intervalId = setInterval(function() {
 		var temp = String.fromCharCode(i);
 		$("h1 span").html(temp);
-		if (temp == str[index] || i >= 90 || str[index] == " ") {
-			$("h1").html(`${str.slice(0, index+1)}<span></span>`);
+		if (temp === str[index] || i >= 90 || str[index] === " ") {
+			$("h1").html(`${str.slice(0, index + 1)}<span></span>`);
 			clearInterval(intervalId);
-			app.renderHero(str, index+1);
+			app.renderHero(str, index + 1);
 		}
 		i++;
 	}, speed);
@@ -64,7 +65,7 @@ app.addNavScrollListener = function() {
 	var about = document.getElementById("about").getBoundingClientRect();
 	var portfolio = document.getElementById("portfolio").getBoundingClientRect();
 	var contact = document.getElementById("contact").getBoundingClientRect();
-	var center = $(window).height()/2;
+	var center = $(window).height() / 2;
 	var startPosition = window.scrollY;
 	if ($(window).width() > 540) 
 	{
@@ -72,14 +73,14 @@ app.addNavScrollListener = function() {
 			about = document.getElementById("about").getBoundingClientRect();
 			portfolio = document.getElementById("portfolio").getBoundingClientRect();
 			contact = document.getElementById("contact").getBoundingClientRect();
-			center = $(window).height()/2;
+			center = $(window).height() / 2;
 			startPosition = window.scrollY;
 		});
 
 		$(window).scroll(function() {
 			var currPosition = window.scrollY;
 			if (currPosition >= 0) {
-				if (currPosition >= about.top+startPosition && currPosition < portfolio.top+startPosition) {
+				if (currPosition >= about.top + startPosition && currPosition < portfolio.top + startPosition) {
 					$(".nav-top").addClass("nav--dk");
 				}
 				else if (currPosition >= portfolio.top+startPosition && currPosition < contact.top+startPosition) {
@@ -95,14 +96,14 @@ app.addNavScrollListener = function() {
 		});
 
 		$(window).scroll(function() {
-			var currPosition = window.scrollY+center;
+			var currPosition = window.scrollY + center;
 			if (currPosition >= 0) {
-				if (currPosition >= about.top+startPosition && currPosition < portfolio.top+startPosition) {
+				if (currPosition >= about.top + startPosition && currPosition < portfolio.top + startPosition) {
 					$(".nav-bottom__item").removeClass("item--selected");
 					$(".nav-about").addClass("item--selected");
 					$(".nav-bottom").addClass("nav--dk");
 				}
-				else if (currPosition >= portfolio.top+startPosition && currPosition < contact.top+startPosition) {
+				else if (currPosition >= portfolio.top+startPosition && currPosition < contact.top + startPosition) {
 					$(".nav-bottom__item").removeClass("item--selected");
 					$(".nav-portfolio").addClass("item--selected");
 					$(".nav-bottom").addClass("nav--dk");
